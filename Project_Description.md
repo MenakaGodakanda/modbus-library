@@ -12,7 +12,7 @@ This project implements a Modbus communication library in C++ for industrial con
 
 5. **Example Usage**: The project offers examples demonstrating how to use the library to simulate Modbus communication between a server and client, aiding developers in understanding and integrating the library into their projects.
 
-## Understand Modbus Portocol:
+## Understand Modbus Protocol:
 ### Modbus Data Packet Structure
 - Modbus RTU Frame:
 ```
