@@ -18,13 +18,13 @@ This project implements a Modbus communication library in C++ for industrial con
 Modbus protocol is a de facto standard for industrial communication, widely used for connecting industrial electronic devices. Modbus allows multiple devices, such as sensors and actuators, to communicate with a controller or a central system over various types of physical networks.
 
 ### Modbus Data Packet Structure
-- Modbus RTU Frame:
+#### Modbus RTU Frame:
 ```
 | Address | Function Code | Data       | CRC        |
 | 1 byte  | 1 byte        | N bytes    | 2 bytes    |
 ```
 
-### Modbus TCP Frame
+#### Modbus TCP Frame
 ```
 | Transaction ID | Protocol ID | Length  | Unit ID | Function Code | Data       |
 | 2 bytes        | 2 bytes     | 2 bytes | 1 byte  | 1 byte        | N bytes    |
