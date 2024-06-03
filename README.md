@@ -56,6 +56,29 @@ Once built, you can run the `modbus_example` executable to see the library in ac
 When you run the `modbus_example` executable, you should see the following output:<br><br>
 ![Screenshot 2024-06-03 221919](https://github.com/MenakaGodakanda/modbus-library/assets/156875412/08986294-ed2c-49fb-92bd-098afb30bbcf)
 
+The output shows the exchange of Modbus messages between a client and a server. The server receives a request, processes it, sends a response, and the client successfully receives and validates the response. Here's what each line represents:
+1. Server received request: `1 3 0 0 0 2 c4 b`:
+This line indicates that the server received a Modbus request. The request is represented as a series of hexadecimal bytes. Here's what each byte means:
+    - `1`: Address of the device that sent the request (in this case, it's device 1).
+    - `3`: Function code, which specifies the type of Modbus function being requested (in this case, it's a read holding registers request).
+    - `0 0`: Starting address of the register being requested (in this case, it's address 0).
+    - `0 2`: Number of registers being requested (in this case, it's 2 registers).
+    - `c4 b`: CRC (Cyclic Redundancy Check) bytes for error detection.
+
+2. Server sending response: `1 3 0 a 0 b 24 f`:
+This line indicates that the server is sending a Modbus response. The response is represented as a series of hexadecimal bytes. Here's what each byte means:
+    - `1`: Address of the server responding to the request (in this case, it's server address 1).
+    - `3`: Function code, which specifies the type of Modbus function being responded (in this case, it's a read holding registers response).
+    - `0 a`: Byte count, indicating the number of data bytes that follow (in this case, it's 10 bytes).
+    - `0 0`: Value of the first register requested (in this case, it's the value 0x0000).
+    - `0 b`: Value of the second register requested (in this case, it's the value 0x000B).
+    - `24 f`: CRC bytes for error detection.
+
+3. Client sending request: `1 3 0 0 0 2 c4 b`:
+This line indicates that the client is sending a Modbus request. The request is identical to the one received by the server, indicating that the client is requesting the same data from the server.
+
+4. Client received valid response.
+This line indicates that the client received a valid response from the server. The client likely verified the CRC and other aspects of the response packet and determined that it is valid.
 
 ## License
 
