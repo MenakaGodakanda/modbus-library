@@ -42,7 +42,8 @@ git clone https://github.com/MenakaGodakanda/modbus-library.git
 5. Build the project: `make`
 
 The output should indicate that the project was built successfully:<br><br>
-
+![Screenshot 2024-06-03 221855](https://github.com/MenakaGodakanda/modbus-library/assets/156875412/1d52065a-001f-4ab1-95fd-c4f81bfc1029)<br><br>
+![Screenshot 2024-06-03 221905](https://github.com/MenakaGodakanda/modbus-library/assets/156875412/1065fc41-df14-42c1-a1b5-9273d0710f97)
 
 ## Usage
 
@@ -53,6 +54,7 @@ Once built, you can run the `modbus_example` executable to see the library in ac
 ```
 
 When you run the `modbus_example` executable, you should see the following output:<br><br>
+![Screenshot 2024-06-03 221919](https://github.com/MenakaGodakanda/modbus-library/assets/156875412/08986294-ed2c-49fb-92bd-098afb30bbcf)
 
 
 ## License
