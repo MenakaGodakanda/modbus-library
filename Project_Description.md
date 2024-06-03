@@ -66,15 +66,15 @@ Below is a sequence diagram illustrating the flow of messages between the Modbus
 
 In this diagram:
 1. Client Interaction:
-  - The client initiates communication by calling the `buildRequest()` method to construct a Modbus request packet.
-  - This request packet is then sent to the server.
+    - The client initiates communication by calling the `buildRequest()` method to construct a Modbus request packet.
+    - This request packet is then sent to the server.
 
 2. Server Interaction:
-  - Upon receiving the request packet, the server processes it and generates a response.
-  - The server then sends the response packet back to the client.
+    - Upon receiving the request packet, the server processes it and generates a response.
+    - The server then sends the response packet back to the client.
 
 3. Response Handling:
-  - The client receives the response packet and calls the `parseResponse()` method to interpret it.
+    - The client receives the response packet and calls the `parseResponse()` method to interpret it.
 
 ## Project Structure:
 ```
@@ -94,32 +94,32 @@ modbus-library/
 ### Main Program (main.cpp)
 This  will simulate a Modbus server and client interaction within the same application for simplicity. The server will handle a basic read holding registers request from the client.
 1. Includes:
-  - `#include <iostream>`: For standard input/output operations.
-  - `#include <vector>`: To use the vector container class.
-  - `#include <thread>`: For multithreading.
-  - `#include "modbus.h"`: Includes the Modbus library header.
+    - `#include <iostream>`: For standard input/output operations.
+    - `#include <vector>`: To use the vector container class.
+    - `#include <thread>`: For multithreading.
+    - `#include "modbus.h"`: Includes the Modbus library header.
 
 2. Server Simulation Function (runServer):
-  - Function Definition: `void runServer(Modbus &server)`
-  - Simulated Request: Creates a request vector simulating a read holding registers request from a client.
-  - Prints Request: Outputs the received request to the console.
-  - Simulated Response: Prepares a response vector with two register values.
-  - Builds Response: Uses the `buildResponse` method to construct the response packet.
-  - Prints Response: Outputs the response to the console.
-  - Client Simulation Function (runClient):
+    - Function Definition: `void runServer(Modbus &server)`
+    - Simulated Request: Creates a request vector simulating a read holding registers request from a client.
+    - Prints Request: Outputs the received request to the console.
+    - Simulated Response: Prepares a response vector with two register values.
+    - Builds Response: Uses the `buildResponse` method to construct the response packet.
+    - Prints Response: Outputs the response to the console.
+    - Client Simulation Function (runClient):
 
 3. Function Definition: `void runClient(Modbus &client)`
-  - Build Request: Constructs a Modbus request to read holding registers.
-  - Prints Request: Outputs the request to the console.
-  - Simulated Response: Defines a response vector to simulate server response.
-  - Parses Response: Uses the `parseResponse` method to validate the response.
-  - Prints Validation Result: Outputs whether the response is valid or not.
+    - Build Request: Constructs a Modbus request to read holding registers.
+    - Prints Request: Outputs the request to the console.
+    - Simulated Response: Defines a response vector to simulate server response.
+    - Parses Response: Uses the `parseResponse` method to validate the response.
+    - Prints Validation Result: Outputs whether the response is valid or not.
 
 4. Main Function:
-  - Modbus Instances: Creates Modbus objects for server and client with unit ID 1.
-  - Server Thread: Starts the server in a separate thread using `std::thread`.
-  - Join Server Thread: Waits for the server thread to complete.
-  - Run Client: Calls the `runClient` function in the main thread.
+    - Modbus Instances: Creates Modbus objects for server and client with unit ID 1.
+    - Server Thread: Starts the server in a separate thread using `std::thread`.
+    - Join Server Thread: Waits for the server thread to complete.
+    - Run Client: Calls the `runClient` function in the main thread.
 
 ### Header File (modbus.h)
 
