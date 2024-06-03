@@ -13,6 +13,10 @@ This project implements a Modbus communication library in C++ for industrial con
 5. **Example Usage**: The project offers examples demonstrating how to use the library to simulate Modbus communication between a server and client, aiding developers in understanding and integrating the library into their projects.
 
 ## Understand Modbus Protocol:
+
+### Modbus Protocol
+Modbus protocol is a de facto standard for industrial communication, widely used for connecting industrial electronic devices. Modbus allows multiple devices, such as sensors and actuators, to communicate with a controller or a central system over various types of physical networks.
+
 ### Modbus Data Packet Structure
 - Modbus RTU Frame:
 ```
